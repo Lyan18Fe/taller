@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Registro">
+
+
+    <TextView
+        android:id="@+id/txt_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="185dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="SALUD SAS"
+        android:textColor="#0500FF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/sp_documento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_view"
+        android:layout_width="103dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Crea tu cuenta de salus sas"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/img_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="118dp"
+        android:layout_height="102dp"
+        android:layout_marginBottom="338dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_terminos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view"
+        app:srcCompat="@drawable/sas" />
+
+    <Spinner
+        android:id="@+id/sp_documento"
+        android:layout_width="219dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txt_nroDocumento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_logo" />
+
+    <EditText
+        android:id="@+id/txt_nroDocumento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="Número de identificación"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txt_telefono"
+        app:layout_constraintStart_toStartOf="@+id/sp_documento"
+        app:layout_constraintTop_toBottomOf="@+id/sp_documento" />
+
+    <EditText
+        android:id="@+id/txt_telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Telefono celular"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txt_correo_registro"
+        app:layout_constraintStart_toStartOf="@+id/txt_nroDocumento"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nroDocumento" />
+
+    <EditText
+        android:id="@+id/txt_correo_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Correo electronico"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/txt_validar_correo"
+        app:layout_constraintStart_toStartOf="@+id/txt_telefono"
+        app:layout_constraintTop_toBottomOf="@+id/txt_telefono" />
+
+    <EditText
+        android:id="@+id/txt_validar_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="Valide su correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/btn_terminos"
+        app:layout_constraintStart_toStartOf="@+id/txt_correo_registro"
+        app:layout_constraintTop_toBottomOf="@+id/txt_correo_registro" />
+
+    <CheckBox
+        android:id="@+id/btn_terminos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="31dp"
+        android:text="Acepto los Términos del servicio y la Política de privacidad y ley de datos personales "
+        android:backgroundTint="#3E4FE2"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="58dp"
+        android:backgroundTint="#3E4FE2"
+        android:text="Siguiente"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_terminos" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

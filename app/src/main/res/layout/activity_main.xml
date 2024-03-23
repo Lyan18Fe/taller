@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="163dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="38dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_Inicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sas" />
+
+    <TextView
+        android:id="@+id/text_Inicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="INICIAR SESIÓN"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/text_texto"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/text_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="41dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="SEGURIDAD SOCIAL"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/sp_documento"
+        app:layout_constraintStart_toStartOf="@+id/text_Inicio"
+        app:layout_constraintTop_toBottomOf="@+id/text_Inicio" />
+
+    <Spinner
+        android:id="@+id/sp_documento"
+        android:layout_width="214dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/input_documento"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_texto" />
+
+    <EditText
+        android:id="@+id/input_documento"
+        android:layout_width="214dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#0500FF"
+        android:ems="10"
+        android:hint="Número de identificación"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/input_contrasena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_documento" />
+
+    <EditText
+        android:id="@+id/input_contrasena"
+        android:layout_width="216dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="#0500FF"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btn_iniciar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_documento" />
+
+    <Button
+        android:id="@+id/btn_iniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="23dp"
+        android:backgroundTint="#3E4FE2"
+        android:text="Iniciar sesión"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/text_nocuenta"
+        app:layout_constraintEnd_toEndOf="@+id/text_nocuenta"
+        app:layout_constraintTop_toBottomOf="@+id/input_contrasena" />
+
+    <TextView
+        android:id="@+id/text_nocuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="¿Aun no tienes cuenta?"
+        app:layout_constraintBottom_toTopOf="@+id/btn_crear_cuenta"
+        app:layout_constraintStart_toStartOf="@+id/btn_crear_cuenta"
+        app:layout_constraintTop_toBottomOf="@+id/btn_iniciar" />
+
+    <TextView
+        android:id="@+id/text_privacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="PRIVACIDAD"
+        android:textColor="#3E4FE2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_AYUDA"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_AYUDA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="16dp"
+        android:text="AYUDA"
+        android:textColor="#3E4FE2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_seguridad"
+        app:layout_constraintStart_toEndOf="@+id/text_privacidad"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crear_cuenta" />
+
+    <TextView
+        android:id="@+id/text_seguridad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
+        android:text="SEGURIDAD"
+        android:textColor="#3E4FE2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_AYUDA" />
+
+    <Button
+        android:id="@+id/btn_crear_cuenta"
+        android:layout_width="145dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        android:backgroundTint="@color/white"
+        android:text="Crear cuenta"
+        android:textColor="#3E4FE2"
+        app:layout_constraintBottom_toTopOf="@+id/text_AYUDA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_nocuenta" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
